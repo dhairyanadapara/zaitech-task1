@@ -1,0 +1,44 @@
+<div class="columns">
+    <div class="column">
+
+        <h1 class="title is-bold has-text-centered" style="font-size:100px; padding-bottom:50px;">
+            Artist
+        </h1>
+
+        <form class="container is-fluid" style="background-color:transparent" method="POST" action="/edit?_method=PATCH">
+            <div class="field">
+                <label class="label level-item has-text-centered">Artist</label>
+                <div class="select">
+                    <select name="artist">
+                        <option>Select Artist</option>
+                        {{#each artists}}
+                        <option>{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label has-text-centered">Description</label>
+                <div class="control">
+                    <textarea class="textarea" name="description" placeholder="Description" required></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label has-text-centered">Active Years</label>
+                <div class="control">
+                    <input class="input" type="number" name="years" placeholder="Active Years" required>
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <input type="submit" class="button is-link" value="Submit">
+                </div>
+                <div class="control">
+                    <input type="reset" class="button is-link" value="Reset">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,123 @@
+<div class="columns">
+    <div class="column">
+
+        <h1 class="title is-bold has-text-centered" style="font-size:100px; padding-bottom:50px;">
+            Artist
+        </h1>
+
+        <form class="container is-fluid" style="background-color:transparent" method="POST" action="/addArtist">
+
+            <div class="field">
+                <label class="label level-item has-text-centered">Name</label>
+                <div class="control">
+                    <input class="input" type="text" name="name" placeholder="Artist Name" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label has-text-centered">Description</label>
+                <div class="control">
+                    <textarea class="textarea" name="description" placeholder="Description" required></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label has-text-centered">Active Years</label>
+                <div class="control">
+                    <input class="input" type="number" name="years" placeholder="Active Years" required>
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <input type="submit" class="button is-link" value="Submit">
+                </div>
+                <div class="control">
+                    <input type="reset" class="button is-link" value="Reset">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="column">
+        <h1 class="title is-bold has-text-centered" style="font-size:100px; padding-bottom:50px;">
+            Album
+        </h1>
+        <form class="container is-fluid" style="background-color:transparent" method="POST" action="/addAlbum">
+            <div class="field">
+                <label class="label level-item has-text-centered">Artist</label>
+                <div class="select">
+                    <select name="artist">
+                        <option>Select Artist</option>
+                        {{#each artists}}
+                        <option>{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label level-item has-text-centered">Name</label>
+                <div class="control">
+                    <input class="input" type="text" name="name" placeholder="Album Name" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label has-text-centered">Release Date</label>
+                <div class="control">
+                    <input class="input" type="date" name="date" placeholder="Release Date" required>
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <input type="submit" class="button is-link" value="Submit">
+                </div>
+                <div class="control">
+                    <input type="reset" class="button is-link" value="Reset">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="column">
+        <h1 class="title is-bold has-text-centered" style="font-size:100px; padding-bottom:50px;">
+            Track
+        </h1>
+        <form class="container is-fluid" style="background-color:transparent" method="POST" action="/addTrack">
+            <div class="field">
+                <label class="label level-item has-text-centered">Artist</label>
+                <div class="select">
+                    <select name="album">
+                        <option>Select Album</option>
+                        {{#each albums}}
+                        <option>{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label level-item has-text-centered">Name</label>
+                <div class="control">
+                    <input class="input" type="text" name="name" placeholder="Track Name" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label has-text-centered">Play Time</label>
+                <div class="control">
+                    <input type="time" class="input" name="time" placeholder="play time">
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <input type="submit" class="button is-link" value="Submit">
+                </div>
+                <div class="control">
+                    <input type="reset" class="button is-link" value="Reset">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

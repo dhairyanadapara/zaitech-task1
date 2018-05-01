@@ -1,0 +1,14 @@
+<div class="tile is-ancestor">
+    <div class="tile is-vertical is-8">
+        <div class="tile">
+            {{#each songs}}
+            <div class="tile is-parent is-vertical">
+                <article class="tile is-child notification is-primary">
+                    <p class="title">{{name}}</p>
+                    <p class="subtitle">{{play_time}}</p>
+                </article>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="notification">
+            <nav class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <p class="subtitle is-5">
+                            <strong>123</strong> posts
+                        </p>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <p class="level-item">
+                        <a class="button is-success" href="/show">Home</a>
+                    </p>
+                    <p class="level-item">
+                        <a class="button is-success" href="/addNew">New</a>
+                    </p>
+                    <p class="level-item">
+                        <a class="button is-success" href="/edit">Edit</a>
+                    </p>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container is-fullhd">
+            {{{body}}}
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="content has-text-centered">
+                    <p>
+                        <strong>Bulma</strong> by
+                        <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+                        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content is licensed
+                        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                    </p>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
